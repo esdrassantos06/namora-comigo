@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namora Comigo Vida!</title>
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="namora-cmg">
+    <div class="texto">
+      <h1>Eu gosto de você!</h1>
+      <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="Imagem de amor" />
+      <br /><br />
+      <h3>Quer Namorar Comigo?</h3>
+      <br />
+      <div class="botoes">
+        <button onclick="sim()" id="sim">SIM!</button>
+        <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">
+          NÃO
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>made by esdras :)</p>
+  </footer>
+</body>
+<style>
+  body {
+    background-color: #FFF;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Playwrite US Modern", sans-serif;
+    user-select: none;
+  }
+
+  h1,
+  h3 {
+    font-weight: 300;
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  .namora-cmg {
+    background-color: #FCFEFC;
+    width: 700px;
+    height: 700px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .texto {
+    position: relative;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  button {
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 3px;
+    width: 100px;
+    height: 45px;
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #ce675b;
+  }
+
+  #sim {
+    margin-left: -100px;
+    color: white;
+  }
+
+  .btn {
+    color: #e74c3c;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 3px;
+    width: 100px;
+    height: 45px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    position: absolute;
+    margin-left: 200px;
+  }
+
+  .btn:hover {
+    color: #5c0e05;
+    border-color: #c0392b;
+  }
+
+  footer {
+    color: #777;
+    margin-top: 20px;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+</style>
+
+<script>
+  function sim() {
+    alert("Você aceitou namorar comigo! :)");
+    window.open("https://www.youtube.com/watch?v=izGwDsrQ1eQ");
+  }
+
+  function desvia(btn) {
+    btn.style.position = "absolute";
+    btn.style.bottom = geraPosicao(1, 95);
+    btn.style.left = geraPosicao(1, 95);
+  }
+
+  function geraPosicao(min, max) {
+  
+    return Math.random() * (max - min) + min + "%";
+  }
+  
+</script>
+
+</html>
